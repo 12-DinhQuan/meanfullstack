@@ -1,0 +1,55 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+
+{
+    "username": "Quang Teo",
+    "password": "123"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+
+{
+    "username": "Quan Dinh",
+    "password": "123"
+}
+
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNGI2NjBhMTIyNTgxMzY5NjBhNjMiLCJpYXQiOjE2NDY0MTQ2OTV9.HUAhxSikW3E3-qZco3tlGr44dqTcSF3ghRSr7xy2IDw
+
+{
+    "title": "Python 2",
+    "description": "Nang Cao",
+    "url": "google.com"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNGI2NjBhMTIyNTgxMzY5NjBhNjMiLCJpYXQiOjE2NDY0MTQ2OTV9.HUAhxSikW3E3-qZco3tlGr44dqTcSF3ghRSr7xy2IDw
+
+
+###
+PUT  http://localhost:5000/api/posts/62224b9a0a12258136960a65
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNGI2NjBhMTIyNTgxMzY5NjBhNjMiLCJpYXQiOjE2NDY0MTQ2OTV9.HUAhxSikW3E3-qZco3tlGr44dqTcSF3ghRSr7xy2IDw
+
+{
+    "title": "Vue",
+    "description": "Basic",
+    "url": "google.com"
+}
+
+
+###
+DELETE  http://localhost:5000/api/posts/62224b9a0a12258136960a65
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNGI2NjBhMTIyNTgxMzY5NjBhNjMiLCJpYXQiOjE2NDY0MTQ2OTV9.HUAhxSikW3E3-qZco3tlGr44dqTcSF3ghRSr7xy2IDw
+
+### 
+GET  http://localhost:5000/api/auth
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyMzk5YjUxNDI2NDQwMTQ5ZDJmY2IiLCJpYXQiOjE2NDc3OTg1MDV9.c77t4sUap-Yrm93TxA01ehmgwhNB9upmrcqnAClMCTY
